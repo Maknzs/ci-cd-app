@@ -17,10 +17,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          pip install -r ci-cd-app/requirements.txt
 
       - name: Run basic HTTP test
         run: |
-          python app.py &
+          python ci-cd-app/app.py &
           sleep 3
           curl -f http://localhost:80 || exit 1
