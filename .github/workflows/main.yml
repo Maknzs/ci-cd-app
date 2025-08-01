@@ -17,7 +17,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r ci-cd-app/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run basic HTTP test
         run: |
