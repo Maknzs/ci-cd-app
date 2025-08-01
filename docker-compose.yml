@@ -1,9 +1,8 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  app:
-    image: nginx:latest
+  web:
     build: .
     ports:
       - "8080:80"
-    container_name: acme_app
+    container_name: flask_app
