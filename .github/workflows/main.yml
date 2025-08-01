@@ -23,7 +23,7 @@ jobs:
         run: |
           python ci-cd-app/app.py &
           sleep 3
-          curl -f http://localhost:80 || exit 1
+          curl -f http://localhost:5000 || exit 1
 
   deploy:
     runs-on: ubuntu-latest
