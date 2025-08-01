@@ -21,8 +21,6 @@ jobs:
 
       - name: Run basic HTTP test
         run: |
-          python ci-cd-app/app.py &
-          for i in {1..10}; do
-            sleep 1
-            curl -f http://localhost:80 && break
-          done
+          python app.py &
+          sleep 5
+          curl -f http://localhost:5000 || exit 1

@@ -4,5 +4,5 @@ services:
   web:
     build: .
     ports:
-      - "8080:80"
+      - "8080:5000"
     container_name: flask_app
