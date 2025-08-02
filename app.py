@@ -1,10 +1,14 @@
 from flask import Flask, render_template, request
+
 app = Flask(__name__)
 count = 0
 
 @app.route('/')
 def hello():
-    return "Hello, World!"
+    return '''
+        <h1>Hello, World!</h1>
+        <a href="/counter">Go to Click Counter</a>
+    '''
 
 @app.route('/counter', methods=['GET', 'POST'])
 def counter():
